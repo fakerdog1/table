@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "role": "Admin",
+      "permissions": "Do everything"
+    },
+    {
+      "id": 2,
+      "role": "Mod",
+      "permissions": "Delete"
+    },
+    {
+      "id": 3,
+      "role": "User",
+      "permissions": "Read"
+    },
+    {
+      "id": 4,
+      "role": "Pesant",
+      "permissions": "Write"
+    },
+    {
+      "id": 5,
+      "role": "Pleb",
+      "permissions": "Do nothing"
+    },
+    {
+      "id": 6,
+      "role": "NEW ROLE",
+      "permissions": "Do nothing"
+    }
+  ]
