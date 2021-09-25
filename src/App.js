@@ -92,6 +92,14 @@ const App = () => {
     setEditRoleId(null);
   }
 
+  const handleDeleteClick = (rolesId) => {
+    const newRoles = [...roles];
+    const index = roles.findIndex((role) => role.id===rolesId)
+
+    newRoles.splice(index, 1);
+    setRoles(newRoles);
+  }
+
   return <div>
     <form onSubmit={handleEditFormSubmit}>
     <table>
@@ -105,7 +113,7 @@ const App = () => {
       <tbody>
         {roles.map((roles) => ( 
           <Fragment> 
-             { editRoleId === roles.id ? <EditableRow editFormRoles={editFormRoles} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick}/> : <ReadOnlyRow roles={roles} handleEditClick={handleEditClick}/> }
+             { editRoleId === roles.id ? <EditableRow editFormRoles={editFormRoles} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick}/> : <ReadOnlyRow roles={roles} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick}/> }
           </Fragment>
        ))}
       </tbody>
